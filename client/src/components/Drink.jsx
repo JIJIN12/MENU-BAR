@@ -8,6 +8,7 @@ import hookah from "../assets/images/hookah.png";
 import cocktails1 from "../assets/images/cocktails1.png";
 import background3 from "../assets/images/background3.jpg";
 import { Button } from "@mui/material";
+import "./css/Drink.css";
 
 export default function Drink() {
   const [menudata, set_menudata] = useState([]);
@@ -26,9 +27,9 @@ export default function Drink() {
 
   return (
     <div className=" relative ">
-      <img src={background3} className="w-full" alt="background" />
-      <img src={background3} className="w-full h-[15rem]" alt="background" />
-      <div className="mx-[3rem] bg-[#000000] absolute pt-[3rem] px-2 top-[0]">
+      <img src={background3} className="w-full h-[100vh]" alt="background" />
+      <img src={background3} className="w-full h-[100vh]" alt="background" />
+      <div className="drink mx-[3rem] bg-[#000000] absolute pt-[3rem] px-2 top-[0]">
         <div className="flex flex-col gap-[1rem]">
           <div className=" border-[1px] border-white">
             <div className="flex justify-evenly">
@@ -39,7 +40,7 @@ export default function Drink() {
               />
               <div className="mt-[2rem] flex">
                 <hr className="w-[10rem] h-4 mt-6" />
-                <h1 className="mx-3 text-[2rem] font-semibold">DRINKS</h1>
+                <h1 className="drink-h1 mx-3 text-[2rem] font-semibold">DRINKS</h1>
                 <hr className="w-[10rem] h-4 mt-6" />
               </div>
               <img
@@ -49,7 +50,7 @@ export default function Drink() {
               />
             </div>
 
-            <div className=" grid grid-cols-2 gap-x-[1rem] gap-y-[1rem]">
+            <div className="drink-details grid grid-cols-2 gap-x-[1rem] gap-y-[1rem]">
               {menudata
                 .filter((item) => item.key === "DRINK")
                 .map((data) => (
@@ -67,7 +68,9 @@ export default function Drink() {
                   </div> */}
                       <p className="flex-grow text-right">${data.price}</p>
                     </div>
-                    <p className="text-[.7rem]">{data.description}</p>
+                    <div className=" flex justify-start">
+                    <p className="drink-des text-[.7rem]">{data.description}</p>
+                  </div>
                   </div>
                 ))}
             </div>
@@ -75,14 +78,14 @@ export default function Drink() {
           <div className="border-[1px] border-white py-4">
             <img
               src={cocktails}
-              className="w-[7rem] h-[9rem]  absolute left-[-1.6rem] top-[34rem] "
+              className="cocktail1 w-[7rem] h-[9rem]  absolute left-[-1.6rem] top-[34rem] "
             />
             <div className="mt-[2rem] flex justify-center">
               <hr className="w-[10rem] h-4 mt-6" />
-              <h1 className="mx-3 text-[2rem] font-semibold">BRUNCH</h1>
+              <h1 className="drink-h1 mx-3 text-[2rem] font-semibold">BRUNCH</h1>
               <hr className="w-[10rem] h-4 mt-6" />
             </div>
-            <div className="  grid grid-cols-2 gap-x-[1rem] gap-y-[1rem]">
+            <div className="drink-details2 grid grid-cols-2 gap-x-[1rem] gap-y-[1rem]">
               {menudata
                 .filter((item) => item.key === "BRUNCH")
                 .map((data) => (
@@ -100,12 +103,12 @@ export default function Drink() {
                   </div> */}
                       <p className="flex-grow text-right">${data.price}</p>
                     </div>
-                    <p className="text-[.7rem]">{data.description}</p>
+                    <p className="drink-des text-[.7rem]">{data.description}</p>
                   </div>
                 ))}
               <img
                 src={cocktails2}
-                className="w-[8rem] h-[9.5rem] absolute right-[-2.4rem] top-[47rem]"
+                className="cocktail2 w-[8rem] h-[9.5rem] absolute right-[-2.4rem] top-[47rem]"
               />
             </div>
           </div>
@@ -115,15 +118,15 @@ export default function Drink() {
             </div>
             <div className="mt-[2rem] flex justify-center">
               <hr className="w-[10rem] h-4 " />
-              <h1 className="text-[2rem] mt-[-2rem] mx-1 font-semibold">HOOKAH FLAVOURS</h1>
+              <h1 className="drink-h1 text-[2rem] mt-[-2rem] mx-1 font-semibold">HOOKAH FLAVOURS</h1>
               <hr className="w-[10rem] h-4" />
             </div>
-            <div className=" grid grid-cols-6 px-2 pt-[1rem]">
+            <div className="drink-details3 grid grid-cols-6 px-2 pt-[1rem]">
               {menudata
                 .filter((item) => item.key === "HOOKAH")
                 .map((data) => (
                   //   <div key={data.id} className=" flex flex-col">
-                  <div className="flex justify-between px-2">
+                  <div className=" drink-hokkah flex justify-between px-2">
                     <p className="text-[.9rem]">{data.item_name}</p>
                   </div>
                   //   </div>

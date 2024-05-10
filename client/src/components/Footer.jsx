@@ -11,7 +11,7 @@ import envelope from "../assets/images/envelope.png";
 export default function Footer() {
   return (
     <div>
-      <div className="px-[2rem] py-[3rem] flex justify-between gap-x-[2rem]">
+      <div className="px-[2rem] py-[3rem] flex justify-between gap-x-[2rem] ">
         <div className=" border-[1px] border-white rounded-lg flex flex-col items-center justify-center px-[2rem]">
           <p className="font-semibold text-[1.5rem] text-blue-600">CONNECT WITH US</p>
           <div className="flex gap-2">

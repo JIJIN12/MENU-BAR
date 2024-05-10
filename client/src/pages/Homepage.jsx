@@ -8,10 +8,10 @@ import Page1 from '../components/Page1'
 export default function Homepage() {
   return (
     <div>
-      {/* <Home/>
+      <Home/>
       <Drink/>
-     <Footer/> */}
-     <Page/>
+     <Footer/>
+     {/* <Page/> */}
     </div>
   )
 }

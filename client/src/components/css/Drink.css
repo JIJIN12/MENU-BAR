@@ -1,0 +1,49 @@
+@media only screen and (max-width: 600px) {
+  .drink-h1 {
+    font-size: 1.4rem;
+  }
+  .drink-des {
+    font-size: 0.5rem;
+  }
+  .drink-details,
+  .drink-details2,
+  .drink-details3 {
+    display: flex;
+    flex-direction: column;
+  }
+  .drink-details div p {
+    font-size: 0.9rem;
+  }
+  .drink-details2 div p {
+    font-size: 0.9rem;
+  }
+  .drink-details3 div p {
+    font-size: 0.9rem;
+  }
+  .drink-details2{
+    padding-bottom: 6rem;
+  }
+  .drink-details3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .drink-hokkah {
+    border: 2px solid;
+    width: 10rem;
+    padding: 6px 4px;
+    flex: 1;
+    justify-content: center;
+  }
+  .cocktail1{
+    top: 68rem;
+  }
+  .cocktail2{
+    top: 93rem;
+    right: 1rem;
+  }
+}
+

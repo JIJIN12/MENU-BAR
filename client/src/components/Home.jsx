@@ -1,40 +1,58 @@
-import React from "react";
+import React, { useState } from "react";
 import image from "../assets/images/Italian-Cuisine.jpg";
 import logo from "../assets/images/logo.jpg";
 import background21 from "../assets/images/background22.jpg";
+import toggle from "../assets/images/toggle.png";
 
 import Stack from "@mui/material/Stack";
 import Button from "@mui/material/Button";
-import './css/Home.css'
+import "./css/Home.css";
 export default function Home() {
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
+  const toggleDropdown = () => {
+    setIsDropdownOpen(!isDropdownOpen);
+  };
   return (
     <div className="">
-      <nav className="px-4 py-2 flex justify-between relative mt-[1rem]">
-        <div className="flex">
-          <div className="">
-            {/* Apply filter to the logo image */}
-            <img src={logo} alt="logo" className="h-[5rem] mix-blend-lighten" />
-          </div>
-          <div className="flex flex-col gap-y-[-2rem]">
-            <h1 className="text-[2rem] font-medium">
-              <span style={{ color: "blue" }}>DEEP </span>
-              <span>NET</span>
-            </h1>
-            <h1 className="text-[2rem] text-zinc-300 flex justify-start font-medium">
-              SOFT
-            </h1>
-          </div>
+       <nav className="navbar px-4 py-2 flex justify-between relative mt-[1rem]">
+      <div className="flex">
+        <div>
+          {/* Apply filter to the logo image */}
+          <img
+            src={logo}
+            alt="logo"
+            className="logo h-[5rem] mix-blend-lighten"
+          />
         </div>
+        <div className="flex flex-col gap-y-[-2rem]">
+          <h1 className="navbar-h1 text-[2rem] font-medium">
+            <span style={{ color: 'blue' }}>DEEP </span>
+            <span>NET</span>
+          </h1>
+          <h1 className="navbar-h1 text-[2rem] text-zinc-300 flex justify-start font-medium">
+            SOFT
+          </h1>
+        </div>
+      </div>
+      <img
+        src={toggle}
+        alt="toggle"
+        className="h-4 hidden"
+        onClick={toggleDropdown}
+      />{" "}
+      {/* Toggle button */}
+      <div className={`dropdown-content ${isDropdownOpen ? 'open' : ''}`}>
+        {/* Dropdown content */}
+        <ul className="navbar-li flex flex-row gap-4 ">
+          <li className="hover:text-blue-500">HOME</li>
+          <li className="hover:text-blue-500">MENU</li>
+          <li className="hover:text-blue-500">MAKE A RESERVATION</li>
+          <li className="hover:text-blue-500">CONTACT US</li>
+        </ul>
+      </div>
+    </nav>
 
-        <div className=" h-fit flex flex-row items-end justify-end">
-          <ul className="flex gap-4 ">
-            <li className="hover:text-blue-500">HOME</li>
-            <li className="hover:text-blue-500">MENU</li>
-            <li className="hover:text-blue-500">MAKE A RESERVATION</li>
-            <li className="hover:text-blue-500">CONTACT US</li>
-          </ul>
-        </div>
-      </nav>
       <header className="mt-[-4rem] ">
         <img src={image} className=" w-full h-[20rem]" alt="background" />
         <div className="absolute top-[5.5rem] left-0 right-0 bg-black bg-opacity-50 text-white text-center p-4 w-[100%] h-[20rem] mt-[-1.5rem]">
@@ -95,7 +113,6 @@ export default function Home() {
           </Stack>
         </div>
       </div>
-    
     </div>
   );
 }
