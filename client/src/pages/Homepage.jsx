@@ -2,8 +2,6 @@ import React from 'react'
 import Home from '../components/Home'
 import Drink from '../components/Drink'
 import Footer from '../components/Footer'
-import Page from '../components/Page'
-import Page1 from '../components/Page1'
 
 export default function Homepage() {
   return (
@@ -11,7 +9,6 @@ export default function Homepage() {
       <Home/>
       <Drink/>
      <Footer/>
-     {/* <Page/> */}
     </div>
   )
 }
